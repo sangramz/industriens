@@ -1,0 +1,224 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Industriens Inkasso</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="{% static 'in/css/stack-interface.css' %}" rel="stylesheet" type="text/css" media="all">
+        <link href="{% static 'in/css/socicon.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'in/css/iconsmind.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'in/css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'in/css/stack-interface.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'in/css/theme.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <link href="{% static 'in/css/custom.css' %}" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+
+    </head>
+    <body data-smooth-scroll-offset="77">
+        <div class="nav-container">
+            <div>
+                <div class="bar bar--sm visible-sm">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3 col-md-2">
+                                <a href="{% url 'index' %}"> <img class="logo logo-dark" alt="logo" src="{% static 'in/img/main/dd.png' %}"> <img class="logo logo-light" alt="logo" src="{% static 'in/img/main/dd.png' %}"> </a>
+                            </div>
+                            <div class="col-9 col-md-10 text-right">
+                                <a href="#" class="hamburger-toggle" data-toggle-class="#menu1;hidden-xs hidden-sm"> <i class="icon icon--sm stack-interface stack-menu"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav id="menu1" class="bar bar-1 hidden-sm pos-fixed" data-scroll-class="366px:pos-fixed">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-1 col-md-2 hidden-sm">
+                                <div class="bar__module">
+                                    <a href="{% url 'index' %}"> <img class="logo logo-dark" alt="logo" src="{% static 'in/img/main/dd.png' %}"> <img class="logo logo-light" alt="logo" src="{% static 'in/img/logo-light.png' %}"> </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
+                                <div class="bar__module" style="padding-top:1em">
+                                    <ul class="menu-horizontal text-left">
+                                        <li>
+                                          <a href="#">
+                                              Servicen
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="#">
+                                              Pricen
+                                          </a>
+                                        </li>
+                                        <li>
+                                          <a href="#">
+                                              Kontakt
+                                          </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bar__module">
+                                    <a class="btn btn--sm type--uppercase" href="{% url 'login' %}"> <span class="btn__text">
+                                    Log Ind
+                                </span> </a>
+                                    <a class="btn btn--sm btn--primary-2 type--uppercase" href="{% url 'login' %}"> <span class="btn__text">
+                                    Opret Bruger
+                                </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="main-container">
+            <section class="switchable space--xxs bg--main text-center">
+                <div class="container">
+
+                  <p class="text-right" style="color:white">
+                        Har du modtaget en opkraevning ?
+                        <a class="btn btn--xs type--uppercase" href="#">
+                            <span class="btn__text" style="color:white">
+                                Klik her
+                            </span>
+                        </a>
+                    </p>
+
+                    <div class="row justify-content-between">
+                        <div class="col-lg-12 col-md-12 col-12">
+
+                          <img alt="Image" src="{% static 'in/img/main/banner.png' %}">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="imagebg space--xxs" data-overlay="9">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="feature feature-5 boxed boxed--lg boxed--border"> <i class="fa fa-angle-double-right fa-4x"></i>
+                                <div class="feature__body">
+                                    <h5>Du Har desvaerre en darlig betaler.-til gengaeld har du os!</h5>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature feature-5 boxed boxed--lg boxed--border"> <i class="fa fa-angle-double-right fa-4x"></i>
+                                <div class="feature__body">
+                                    <h5>Upload bot den ubetalte faktura. Vi overterger resten herfra!</h5>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature feature-5 boxed boxed--lg boxed--border"> <i class="fa fa-angle-double-right fa-4x"></i>
+                                <div class="feature__body">
+                                    <h5>Du far hele det skyledig belob. Den er God Nok - det er GRATIS!</h5>
+
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="text-center space--sm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="mid-blue">Servicen</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="switchable feature-large space-sm">
+                <div class="container">
+                    <div class="row justify-content-around">
+                        <div class="col-md-6"> <img alt="Image" class="border--round" src="{% static 'in/img/main/img1.png' %}"> </div>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="switchable__text">
+                                <h2>Upload Ubetalt Faktura</h2>
+                                <p class="lead">
+                                  Upload Ubetalt Faktura, Som du onsker, at vi skal inndrive for digog laen dig tilbage Sla bliver den automastikog sikkert registreret i vores system, sa vi kan indlede inndrivelsen
+                                </p>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="switchable feature-large space--sm switchable--switch">
+                <div class="container">
+                    <div class="row justify-content-around">
+                        <div class="col-md-6"> <br><br><br><br><br><img alt="Image" class="border--round" src="{% static 'in/img/main/img1.png' %}"> </div>
+                        <div class="col-md-6 col-lg-5">
+                            <div class="switchable__text">
+                                <h2>Enkelt overblik over dine sager</h2>
+                                <p class="lead">
+                                  Nar du er logget ind som bruger, far du et overskueligt overblik over dine respektive sager. Her kan du bl.a se, hvor mange rykkere vi har sendt samt hvor langt i inkassoprocessesen vi er naet.
+                                  Du kan se, hvor mange penge du har til gode oghvad vihar inddrevet for dig.
+                                </p>
+                                <h2>Fa dine penge tilbage</h2>
+                                <p class="lead">
+                                  Vi ved, at det er vigtigt, at du far dine penge hurtigst muligt, for at sikre et sundt cash flow. Vi udbetaleralt det vi har inddrevet for dig den sidste bankdag i hver maned.
+                                </p>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg--dark-blue space--xs text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-10">
+                            <div class="cta">
+                                <h2 class="light-blue">Priser</h2>
+                                <p class="text-left light-blue lead">Det Er GRATIS!</p>
+                                <p class="text-left t-white">
+                                  Vi folger et helt klart princip om, at det ikke skal koste dig noget, at fde penge, som du er berettiget til. Hvis en kunde skylder dig 100 kr., f r du sledes ogs 100 kr. tilbage, n r vi har inddrevet dem. Vi pgger blot eventuelle rykkergebyrer, renter og inkassoomkostninger, som skyldner skal betale. Derfor bliver du stillet konomisk, som hvis skyldner havde betalt sin faktura rettidigt i frste omgang.
+                                </p>
+                                <p class="text-left t-white">
+                                  * S fremt vi skal registrere en skyldner i RKI, er der omkostninger forbundet med det, som du skal afholde. N r skyldner har betalt dit tilgodehavende + disse ekstraomkostninger, f r du det retur, naturligvis.
+                                </p>
+                                <p class="text-left t-white">
+                                  ** Safremt skyldner afgiver indsigelse mod kravet, eller vi af andre rsager skal i retten for at inddrive g lden, kan der v re omkostninger forbundet med det. Du vil i s fald altid blive oplyst det f rst.
+                                </p>
+                                <p class="text-left light-blue lead">Kom i gang allerede nu!</p>
+                                <a class="btn btn--primary type--uppercase" href="#">
+                                  <span class="btn__text">
+                                  Opret Bruger
+                                  </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="text-center-xxs space--xxs">
+                <div class="container">
+                    <div class="row">
+                      <div class="col-md-3">
+                          <a href="index.html">
+                            <img alt="logo" class="logo" src="{% static 'in/img/main/dd.png' %}">
+                      </div>
+                        <div class="col-md-8" style="padding-top: 2%">
+                            <ul class="list-inline">
+                                <li> <a href="#"><span class="h5 type--uppercase">Kobmagergade 55, 1 Sal - 1150 Kobenhavn K - kontakt@industreinsinkasso.dk - CVR 39390770</span></a> </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </footer>
+        </div>
+        <script src="{% static 'in/js/jquery-3.1.1.min.js' %}"></script>
+        <script src="{% static 'in/js/parallax.js' %}"></script>
+        <script src="{% static 'in/js/granim.min.js' %}"></script>
+        <script src="{% static 'in/js/smooth-scroll.min.js' %}"></script>
+        <script src="{% static 'in/js/scripts.js' %}"></script>
+
+    </body>
+
+</html>
