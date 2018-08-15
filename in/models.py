@@ -1,13 +1,14 @@
 from django.db import models
 from django.utils import timezone
 
-class company_info(models.Model):
-    name = models.CharField(max_length=40)
-    address = models.CharField(max_length=40)
+class CompanyInfo(models.Model):
+    name = models.CharField(max_length=70)
+    address = models.TextField()
     postnr = models.IntegerField()
-    by = models.CharField(max_length=40)
-    tlf = models.CharField(max_length=40)
+    by = models.CharField(max_length=15)
+    tlf = models.CharField(max_length=15)
     email = models.EmailField()
-    bank = models.CharField(max_length=40)
-    regnr = models.CharField(max_length=40)
-    kontonr = models.CharField(max_length=40)
+    bank = models.CharField(max_length=50)
+    regnr = models.IntegerField()
+    kontonr = models.CharField(max_length=15)
+    active = models.BooleanField(default=True)

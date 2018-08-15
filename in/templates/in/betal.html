@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block topmenu %}
+<div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
+  <div class="bar__module" style="padding-top:1em">
+      <ul class="menu-horizontal text-left">
+        <li>
+
+      </li>
+      <li>
+
+      </li>
+      <li>
+        <a href="{% url 'kontakt' %}">
+            Kontakt
+        </a>
+      </li>
+     </ul>
+   </div>
+   <div class="bar__module">
+     <a class="btn btn--sm type--uppercase" href="{% url 'login' %}">
+       <span class="btn__text"> Log Ind </span> </a>
+     <a class="btn btn--sm btn--primary-2 type--uppercase" href="#">
+      <span class="btn__text"> Forsiden </span> </a>
+   </div>
+</div>
+
+ {% endblock %}
+
+ {% block content %}
+ <section class="bg--mid-blue space--xs text-center">
+     <div class="container">
+         <div class="row">
+             <div class="col-md-8 col-lg-10">
+                 <div class="cta">
+                     <h2 class="t-white">Betal Online nu</h2>
+                     <p class="text-center t-white lead">
+                       Vi accepterer straksbetalinger med Dankort, Visa-kort, Mastercard og MobilePay
+                     </p>
+                     <img class="logo logo-light" alt="logo" src="/static/in/img/main/payops.png">
+                     <br><br>
+                     <a class="btn btn--sm type--uppercase t-white" href="{% url 'afdrag' %}"> 
+                            <span class="btn__text" style="color:white"> Betal </span>
+                     </a>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
+
+ <section class="text-center space--sm">
+     <div class="container">
+         <div class="row">
+             <div class="col-md-12">
+                 <h1 class="mid-blue">Afdragsordning</h1>
+             </div>
+         </div>
+         <div class="row justify-content-around">
+           <div class="col-md-8 col-lg-10">
+               <div class="cta">
+                   <p class="text-center lead">
+                     Vi accepterer straksbetalinger med Dankort, Visa-kort, Mastercard og MobilePay
+                   </p>
+                   <p class="text-left">
+                     Med vores automatiske afdragsberegner, kan du hurtigt og nemt indtaste hvad du vil afdrage med manediigt.
+                   </p>
+                   <p class="text-left">
+                     Nar du @nsker at betale belabet over flere maneder, skal du blot logge ind og indtaste hvad du onsker at afdrage med i vores afdragsberegner. Her kan du sel justere og bestemme, hvilket belab du vilog kan afdrage med. idover far du pa samme tid det fulde overblik over de ‘omkostninger, der er forbundet med dit totale afdrag
+                   </p>
+                   <p class="text-left">
+                     Nar vilaver en afdragsordning, tilmelder vi betalingen til PBS, saledes at du automatisk bliver trukket dit valgte afdragsbelab hver maned. Du kan til enhver tid logge ind og se de
+                   </p>
+                   <a class="btn btn--sm btn--primary-2 type--uppercase" href="#">
+                          <span class="btn__text"> Ansog </span>
+                    </a>
+               </div>
+           </div>
+         </div>
+     </div>
+ </section>
+
+ <section class="bg--dark-blue space--xs text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-lg-10">
+                            <div class="cta">
+                                <h1 class="light-blue">Har du allerede betalt?</h1>
+                                <p class="text-center t-white lead">
+                                  Hvis du allerede har betalt din regning og modtager en opkraevning fra os, er det meget beklageligt. Hvis det sker, bedes du sende os kvittering for din indbetaling fra din bank og s& vil vi straks undersoge sagen
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+ {% endblock %}

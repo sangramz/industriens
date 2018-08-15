@@ -41,107 +41,99 @@
                             <div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
                                 <div class="bar__module" style="padding-top:1em">
                                     <ul class="menu-horizontal text-left">
-                                        <li class="modal-instance">
-                                          <div>
-                                          	<a class="modal-trigger" href="#">
-                                          		<span class="btn__text">
-                                          			VIRKOMHEDSINFO
-                                          		</span>
-                                          	</a>
-                                          	<div class="modal-container">
-                                          		<div class="modal-content">
+                                      <li>
+                                      <div class="modal-instance">
+                                        <a class="modal-trigger" href="#" data-modal-index="5">
+                                            VIRKOMHEDSINFO
+                                        </a>
+                                        <!-- Modal Content for upload -->
+                                        <div class="modal-container" data-modal-index="5">
+                                            <div class="modal-content section-modal">
+                                                <section class="unpad ">
+                                                    <div class="container">
+                                                        <div class="row justify-content-center">
+                                                            <div class="col-md-8 col-12">
+                                                                <div class="feature feature-1">
+                                                                    <div class="feature__body boxed boxed--lg boxed--border text-center" style="background-color: #98D5E7">
+                                                                        <div class="modal-close modal-close-cross"></div>
+                                                                        <div class="text-block">
+                                                                            <h3 style="font-weight:bold">VIRKOMHEDSINFO</h3>
+                                                                        </div>
+                                                                        <form action="{% url 'kunde' %}" method="POST">
+                                                                          {% csrf_token %}
+                                                                          <div class="row">
+                                                                            <div class="col-xs-4" style="padding-right: 2%">
+                                                                              <input type="text" class="form-control" name="cvr" placeholder="CVR">
+                                                                            </div>
 
-                                                <div class="modal-container" data-modal-index="5">
-                                                      <div class="modal-content section-modal">
-                                                          <section class="unpad ">
-                                                              <div class="container">
-                                                                  <div class="row justify-content-center">
-                                                                      <div class="col-md-8 col-12">
-                                                                          <div class="feature feature-1">
-                                                                              <div class="feature__body boxed boxed--lg boxed--border text-center" style="background-color: #98D5E7">
-                                                                                  <div class="modal-close modal-close-cross"></div>
-                                                                                  <div class="text-block">
-                                                                                      <h3 style="font-weight:bold">VIRKOMHEDSINFO</h3>
-                                                                                  </div>
-                                                                                  <form method="POST" action="{% url 'kunde' %}">
-                                                                                    {% csrf_token %}
-                                                                                    <div class="row">
-                                                                                      <div class="col-xs-4" style="padding-right: 2%">
-                                                                                        <input type="text" class="form-control" name="cvr" placeholder="CVR">
-                                                                                      </div>
+                                                                            <div class="col-xs-4">
+                                                                              <a class="btn btn--primary-1" href="#">
+                                                                                  <span class="btn__text">Hent Oplysninger</span>
+                                                                              </a>
+                                                                            </div>
+                                                                            <div class="col-xs-3">
+                                                                            </div>
 
-                                                                                      <div class="col-xs-4">
-                                                                                        <a class="btn btn--primary-1" href="#">
-                                                                                            <span class="btn__text">Hent Oplysninger</span>
-                                                                                        </a>
-                                                                                      </div>
-                                                                                      <div class="col-xs-3">
-                                                                                      </div>
-
-                                                                                    </div>
-
-                                                                                    <div class="row">
-                                                                                      {{ company_info_form.firm_name }}
-                                                                                    </div><br>
-
-                                                                                    <div class="row">
-                                                                                      <div class="col-xs-6" style="padding-right: 2%">
-                                                                                        {{ company_info_form.address }}
-                                                                                      </div>
-
-                                                                                      <div class="col-xs-3" style="padding-right: 2%">
-                                                                                        {{ company_info_form.postnr }}
-                                                                                      </div>
-                                                                                      <div class="col-xs-3">
-                                                                                        {{ company_info_form.by }}
-                                                                                      </div>
-
-                                                                                    </div>
-
-                                                                                    <div class="row">
-                                                                                      <div class="col-xs-4" style="padding-right: 2%">
-                                                                                        {{ company_info_form.tlf }}
-                                                                                      </div>
-                                                                                      <div class="col-xs-4">
-                                                                                        {{ company_info_form.email }}
-                                                                                      </div>
-                                                                                    </div>
-
-                                                                                    <p style="text-align:center">Hvor Skal pengene indsaettes fra skyldner?</p>
-
-                                                                                    <div class="row">
-                                                                                      <div class="col-xs-6" style="padding-right: 2%">
-                                                                                        {{ company_info_form.bank }}
-                                                                                      </div>
-                                                                                      <div class="col-xs-3" style="padding-right: 2%">
-                                                                                        {{ company_info_form.regnr }}
-                                                                                      </div>
-                                                                                      <div class="col-xs-3">
-                                                                                        {{ company_info_form.kontonr }}
-                                                                                      </div>
-                                                                                    </div>
-                                                                                      <input type="submit" class="btn btn--primary-2"/>
-
-                                                                                  </form>
-                                                                              </div>
                                                                           </div>
-                                                                          <!--end feature-->
-                                                                      </div>
-                                                                  </div>
-                                                                  <!--end of row-->
-                                                              </div>
-                                                              <!--end of container-->
-                                                          </section>
-                                                      </div>
-                                                  </div>
 
+                                                                          <div class="row">
+                                                                          {{ form.name }}
+                                                                          </div><br>
 
-                                          		</div>
-                                          	</div>
-                                          </div>
+                                                                          <div class="row">
+                                                                            <div class="col-xs-6" style="padding-right: 2%">
+                                                                              {{ form.address }}
+                                                                            </div>
 
+                                                                            <div class="col-xs-3" style="padding-right: 2%">
+                                                                              {{ form.postnr }}
+                                                                            </div>
+                                                                            <div class="col-xs-3">
+                                                                              {{ form.by }}
+                                                                            </div>
 
-                                    </li>
+                                                                          </div>
+
+                                                                          <div class="row">
+                                                                            <div class="col-xs-4" style="padding-right: 2%">
+                                                                              {{ form.tlf }}
+                                                                            </div>
+                                                                            <div class="col-xs-4">
+                                                                              {{ form.email }}
+                                                                            </div>
+                                                                          </div>
+
+                                                                          <p style="text-align:center">Hvor Skal pengene indsaettes fra skyldner?</p>
+
+                                                                          <div class="row">
+                                                                            <div class="col-xs-6" style="padding-right: 2%">
+                                                                              {{ form.bank }}
+                                                                            </div>
+                                                                            <div class="col-xs-3" style="padding-right: 2%">
+                                                                              {{ form.regnr }}
+                                                                            </div>
+                                                                            <div class="col-xs-3">
+                                                                              {{ form.kontonr }}
+                                                                            </div>
+                                                                          </div>
+                                                                            <input type="submit" class="btn btn--primary-2"/>
+
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                                <!--end feature-->
+                                                            </div>
+                                                        </div>
+                                                        <!--end of row-->
+                                                    </div>
+                                                    <!--end of container-->
+                                                </section>
+                                            </div>
+                                        </div>
+                                          <!-- Modal Content for upload -->
+                                      </div>
+                                      </li>
+
                                         <li>
                                           <a href="#">
                                               Kontakt
@@ -153,7 +145,7 @@
                                     <a class="btn btn--sm type--uppercase" href="#"> <span class="btn__text">
                                     Sager
                                 </span> </a>
-                                    <a class="btn btn--sm btn--primary-2 type--uppercase" href="#"> <span class="btn__text">
+                                    <a class="btn btn--sm btn--primary-2 type--uppercase" href="{% url 'logout' %}"> <span class="btn__text">
                                     Log Und
                                 </span> </a>
                                 </div>
@@ -244,6 +236,7 @@
 						</h2>
 
 						<div class="row">
+
 							<div class="col-sm-4">
 								<p class="t-white"> Sorter efter <br> &gt; Nyeste Forste</p>
 							</div>
@@ -262,45 +255,42 @@
 						</div><br>
 
 						<div class="row t-white">
+                {% for i in info %}
+              <div class="col-sm-4">
+          <div class="boxed bg--secondary boxed--sm boxed--border">
+            <div class="bg--mid1-blue dark-blue" style="padding:4%">
+              <p class="lead">{{ i.name }}<br>
+              <span class="">{{ i.address }}<br>
+              {{ i.postnr }}</span>
+              </p>
+            </div>
+            <br>
+            <div class="bg--mid1-blue dark-blue">
+              <p class="text-center lead">Rykker 2</p>
+            </div>
 
-              {% for ci in Company_info %}
-								<div class="col-sm-4">
-									<div class="boxed bg--secondary boxed--sm boxed--border">
-										<div class="bg--mid1-blue dark-blue" style="padding:4%">
-											<p class="lead">{{ ci.name }}<br>
-											<span class="">{{ ci.address }}<br>
-											Postnr. {{ ci.postnr }} By {{ ci.by }}</span>
-											</p>
-										</div>
-										<br>
-										<div class="bg--mid1-blue dark-blue">
-											<p class="text-center lead">Rykker 2</p>
-										</div>
+            <div class="row dark-blue">
+              <div class="col-sm-2" style="text-align:center">
+                <p class="dark-blue">Sagsnr</p>
+                <i class="fas fa-hashtag fa-2x"></i>
+                <p>12536</p>
+              </div>
+              <div class="col-sm-5" style="text-align:center">
+                <p>Dato</p>
+                <i class="far fa-calendar-alt fa-2x"></i>
+                <p>12/03-2018</p>
+              </div>
+              <div class="col-sm-5" style="text-align:center">
+                <p>Udestaende</p>
+                <i class="fas fa-coins fa-2x"></i>
+                <p>25.000,00</p>
+              </div>
 
-										<div class="row dark-blue">
-											<div class="col-sm-2" style="text-align:center">
-												<p class="dark-blue">Sagsnr</p>
-												<i class="fas fa-hashtag fa-2x"></i>
-												<p>12536</p>
-											</div>
-											<div class="col-sm-5" style="text-align:center">
-												<p>Dato</p>
-												<i class="far fa-calendar-alt fa-2x"></i>
-												<p>12/03-2018</p>
-											</div>
-											<div class="col-sm-5" style="text-align:center">
-												<p>Udestaende</p>
-												<i class="fas fa-coins fa-2x"></i>
-												<p>25.000,00</p>
-											</div>
+            </div>
 
-										</div>
-
-									</div>
-								</div>
-                {% endfor %}
-
-
+          </div>
+        </div>
+        {% endfor %}
 
 						</div>
 					</div>

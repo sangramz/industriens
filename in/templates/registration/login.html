@@ -78,7 +78,7 @@
                                               <a class="btn btn--sm type--uppercase" href="{% url 'login' %}"> <span class="btn__text">
                                               Log Ind
                                           </span> </a>
-                                              <a class="btn btn--sm btn--primary-2 type--uppercase" href="{% url 'login' %}"> <span class="btn__text">
+                                              <a class="btn btn--sm btn--primary-2 type--uppercase" href="{% url 'register' %}"> <span class="btn__text">
                                               Opret Bruger
                                           </span> </a>
                                           </div>
@@ -92,12 +92,9 @@
           <section class="switchable bg--dark-blue space--xxs">
                   <div class="container">
                     <div class="tabs-container" data-content-align="left">
-                    	<ul class="tabs">
+                    	<ul>
                     		<li class="active">
-                    			<div class="tab__title text-center">
-                    				<i class="icon icon--sm block icon-CLASS"></i>
-                    				<span class="h5 t-white">Login</span>
-                    			</div>
+
                     			<div class="tab__content">
 
                             <div class="row justify-content-between">
@@ -105,15 +102,13 @@
                                     <div class="mt--3">
                                         <h2 class="t-white">Log Ind</h2>
                                         <hr class="short">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-12"> <input type="email" name="Email Address" placeholder="Email Address"> </div>
-                                                <div class="col-12"> <input type="password" name="Password" placeholder="Password"> </div>
-                                                <div class="col-12"> <button type="submit" class="btn btn--primary">Login</button> </div>
-                                                <div class="col-12"> <span class="type--fine-print t-white">Forgot Password?</span>
-                                                </div>
-                                            </div>
+                                        <form method="post">
+                                          {% csrf_token %}
+                                          {{ form }}
+                                          <br><br>
+                                          <div class="col-12"> <button type="submit" class="btn btn--primary">Login</button> </div>
                                         </form>
+
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-5"> <img alt="Image" class="border--round box-shadow-wide" src="{% static 'in/img/loginbanner.png' %}"> </div>
@@ -121,37 +116,7 @@
 
                     			</div>
                     		</li>
-                    		<li>
-                    			<div class="tab__title text-center">
-                    				<i class="icon icon--sm block icon-CLASS"></i>
-                    				<span class="h5 t-white">Register</span>
-                    			</div>
-                    			<div class="tab__content">
 
-                            <div class="row justify-content-between">
-                              <div class="col-md-6 col-lg-5"> <img alt="Image" class="border--round box-shadow-wide" src="{% static '/in/img/loginbanner.png' %}"> </div>
-
-                                <div class="col-md-6 col-lg-5">
-                                    <div class="mt--3">
-                                        <h2 class="t-white">Join Today & Start Collecting Your Debt on Few Clicks !</h2>
-                                        <hr class="short">
-                                        <form>
-                                            <div class="row">
-                                                <div class="col-12"> <input type="email" name="Email Address" placeholder="Email Address"> </div>
-                                                <div class="col-12"> <input type="password" name="Password" placeholder="Password"> </div>
-                                                <div class="col-12"> <input type="password" name="Password" placeholder="Confirm Password"> </div>
-                                                <div class="col-12"> <button type="submit" class="btn btn--primary">Create Account</button> </div>
-                                                <div class="col-12"> <span class="type--fine-print t-white">By creating Account,
-                                                  <a href="#" class="h4 light-blue"> You agree to the terms & condition</a></span>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                    			</div>
-                    		</li>
                     	</ul>
                     </div><!--end of tabs container-->
 

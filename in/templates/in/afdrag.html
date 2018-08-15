@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+
+
+{% block topmenu %}
+<div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
+  <div class="bar__module" style="padding-top:1em">
+      <ul class="menu-horizontal text-left">
+        <li>
+
+      </li>
+      <li>
+
+      </li>
+      <li>
+        <a href="{% url 'kontakt' %}">
+            Kontakt
+        </a>
+      </li>
+     </ul>
+   </div>
+   <div class="bar__module">
+     <a class="btn btn--sm type--uppercase" href="#">
+       <span class="btn__text"> Minside </span> </a>
+     <a class="btn btn--sm btn--primary-2 type--uppercase" href="#">
+      <span class="btn__text"> Log Und </span> </a>
+   </div>
+</div>
+
+ {% endblock %}
+
+{% block content %}
+<section class="bg--dark-blue space--xs text-left">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4">
+          <div class="row">
+        		<div class="col-sm-4">
+              <i class="fa fa-user fa-7x light-blue" aria-hidden="true"></i>
+      			</div>
+      		<div class="col-sm-7">
+      			<p class="light-blue">
+      				CVR/CPR<br>
+      				Firmanavn ApS<br>
+      				Firma Adresse nr.12<br>
+      				Postnr. By<br>
+      				Tlf.<br>
+      				Email
+
+      			</p>
+      		</div>
+      		</div>
+        </div>
+
+      <div class="col-md-8">
+
+        <div class="tabs-container" data-content-align="left">
+          <ul class="tabs t-white">
+
+            <li class="active">
+              <div class="tab__title">
+                <span class="h5 t-white lead">Afdrag ></span>
+              </div>
+
+            </li>
+
+            <li class="">
+              <div class="tab__title">
+                  <span class="h5 t-white lead">Betaling ></span>
+              </div>
+            </li>
+
+            <li class="">
+                <div class="tab__title">
+                    <span class="h5 t-white lead">Kvettering ></span>
+                </div>
+
+            </li>
+          </ul>
+
+          <ul class="tabs-content">
+            <li class="">
+              <div class="tab__content">
+                <div class="boxed bg--secondary boxed--sm boxed--border">
+                  <div class="row">
+                    <div class="col-sm-6 text-left">
+                      <h5 class="lead">Skyldigt Belob
+                        <br>Lobetid I Maneder</h5>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                      <h5 class="lead">12, 000.00 kr
+                        <br>5 mdr</h5>
+                    </div>
+                  </div>
+
+                        <hr style="border-top: 2px solid #206782">
+
+                  <div class="bg--mid-blue dark-blue" style="padding:4%">
+                    <p class="t-white lead">Din Aftale</p>
+                    <div class="row">
+                        <div class="col-sm-5 t-white pull-left">
+                            Rentabetalling
+                        </div>
+                        <div class="col-sm-5 t-white pull-right">
+                            2.400 kr
+                        </div>
+                    </div>
+                    <hr style="border-top: 2px solid #FFFFFF">
+
+                    <div class="row">
+                        <div class="col-sm-5 t-white pull-left">
+                            Rentabetalling
+                        </div>
+                        <div class="col-sm-5 t-white pull-right">
+                            2.400 kr
+                        </div>
+                    </div>
+                    <hr style="border-top: 2px solid #FFFFFF">
+
+                    <div class="row">
+                        <div class="col-sm-5 t-white pull-left">
+                            Rentabetalling
+                        </div>
+                        <div class="col-sm-5 t-white pull-right">
+                            2.400 kr
+                        </div>
+                    </div>
+                    <hr style="border-top: 2px solid #FFFFFF">
+
+                    <a href="#" class="btn btn-lg btn--dark-blue type--uppercase">
+                    <span class="t-white">
+                      <strong>Print Aftale</strong>
+                    </span>
+                  </a>
+
+                  </div>
+
+
+                </div>
+            </div>
+        </li>
+
+        <li class="active">
+          <div class="tab__content">
+            <div class="boxed bg--mid-blue boxed--sm boxed--border">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h5 class="t-white lead">kreditkortinformation</h5>
+                </div>
+                <div class="col-sm-6">
+                  <img src="/static/in/img/main/payops.png" width="70%">
+                </div>
+              </div><br>
+              <form>
+              <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="kortnummer">
+                </div>
+              </div>
+              </div>
+
+              <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="navn pa kort">
+                </div>
+              </div>
+              </div>
+
+              <div class="row">
+              <div class="col-sm-4 t-white lead">
+                Udlobsdato
+              </div>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" name="name" placeholder="md.">
+              </div>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" name="name" placeholder="md.">
+              </div>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" name="name" placeholder="SikkerhedSkode">
+              </div>
+              </div>
+
+              <br><br>
+
+              <div class="text-center">
+                <a href="#" class="btn btn--sm bg--dark-blue type--uppercase text-center">
+                  <span class="btn__text t-white">
+                    <strong class="t-white">Anmod om afdrag</strong>
+                  </span>
+                </a>
+                <br>
+                <a href="#">
+                  <span class="t-white">
+                    <strong>afdragbetingelser</strong>
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <div class="bg--white space--sm boxed--sm boxed--border">
+            <h5 class="light-blue lead text-center">
+                <span>Sagsnr : 12536</span>
+            </h5>
+            </div>
+
+          </div>
+        </li>
+
+
+        <li class="">
+          <div class="tab__content">
+            <div class="tab__content">
+              <p class="text-left t-white">
+                <span class="lead">Tak for din Betaling</span>
+                <br>
+                Du vilmodtage en kvittering i din email indbox- du kan ogsa veelge at printenr. By kvitteringen ved at trykke pa “Print aftale” herunder.
+              </p>
+
+              <div class="boxed bg--secondary boxed--sm boxed--border">
+                <div class="row">
+                  <div class="col-sm-6 text-left">
+                    <h5 class="lead">Skyldigt Belob
+                      <br>Lobetid I Maneder</h5>
+                  </div>
+                  <div class="col-sm-6 text-right">
+                    <h5 class="lead">12, 000.00 kr
+                      <br>5 mdr</h5>
+                  </div>
+                </div>
+
+                      <hr style="border-top: 2px solid #206782">
+
+                <div class="bg--mid-blue dark-blue" style="padding:4%">
+                  <p class="t-white lead">Din Aftale</p>
+                  <div class="row">
+                      <div class="col-sm-5 t-white pull-left">
+                          Rentabetalling
+                      </div>
+                      <div class="col-sm-5 t-white pull-right">
+                          2.400 kr
+                      </div>
+                  </div>
+                  <hr style="border-top: 2px solid #FFFFFF">
+
+                  <div class="row">
+                      <div class="col-sm-5 t-white pull-left">
+                          Rentabetalling
+                      </div>
+                      <div class="col-sm-5 t-white pull-right">
+                          2.400 kr
+                      </div>
+                  </div>
+                  <hr style="border-top: 2px solid #FFFFFF">
+
+                  <div class="row">
+                      <div class="col-sm-5 t-white pull-left">
+                          Rentabetalling
+                      </div>
+                      <div class="col-sm-5 t-white pull-right">
+                          2.400 kr
+                      </div>
+                  </div>
+                  <hr style="border-top: 2px solid #FFFFFF">
+
+                  <a href="#" class="btn btn-lg btn--dark-blue type--uppercase">
+                  <span class="t-white">
+                    <strong>Print Aftale</strong>
+                  </span>
+                </a>
+
+                </div>
+
+
+              </div>
+          </div>
+          </div>
+        </li>
+                </ul>
+
+            </div>
+
+      </div>
+
+          </div>
+        <!--end of row-->
+    </div>
+    <!--end of container-->
+</section>
+{% endblock %}
