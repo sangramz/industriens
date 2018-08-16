@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+{% block topmenu %}
+<div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
+    <div class="bar__module" style="padding-top:1em">
+        <ul class="menu-horizontal text-left">
+            <li>
+              <a href="#">
+                  Servicen
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                  Pricen
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'kontakt' %}">
+                  Kontakt
+              </a>
+            </li>
+        </ul>
+    </div>
+    <div class="bar__module">
+        <a class="btn btn--sm type--uppercase" href="{% url 'login' %}"> <span class="btn__text">
+        Log Ind
+    </span> </a>
+        <a class="btn btn--sm btn--primary-2 type--uppercase" href="{% url 'register' %}"> <span class="btn__text">
+        Opret Bruger
+    </span> </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<section class="bg--mid-blue space--xs text-center">
+   <div class="container">
+       <div class="row">
+           <div class="col-md-8 col-lg-10">
+               <div class="cta">
+                   <h2 class="t-white">Har du modtaget mail fra OS ?</h2>
+                   <p class="text-center t-white lead">
+                     Hvis du har modtaget et brev eller e-mail fra os, er det med al sandsynlighed fordi, at en virksomhed har bedt os kommunikere med dig, med henblik pat fderes tilgodehavende af dig.
+                   </p>
+                   <p class="text-center t-white lead">
+                     Vi er nemme at tale med, shold dig endeligt ikke tilbage, hvis du har h rt fra os lad os tage dialogen, det er oftest nemmest og billigst.
+                   </p>
+                   <br><br>
+                   <a class="btn btn--sm type--uppercase t-white" href="#">
+                          <span class="btn__text" style="color:white"> Laes Mere </span>
+                   </a>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+<section class="space--xs text-center">
+   <div class="container">
+       <div class="row">
+           <div class="col-md-8 col-lg-10">
+               <div class="cta">
+                   <h2 class="mid-blue">Betal/afdrag</h2>
+                   <p class="text-center lead">
+                     Klik her og betal direkte igennem vores betalingssystem. Du kan b de betale med kort, MobilePay eller tilmelde dig PBS betaling, hvis du nsker at afdrage over en periode.
+                   </p>
+
+                   <br><br>
+                   <a class="btn btn--sm btn--primary-2 type--uppercase" href="/betal/"> <span class="btn__text">
+                      Betal
+                  </span> </a>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+<section class="bg--dark-blue space--xs text-center">
+   <div class="container">
+       <div class="row">
+           <div class="col-md-8 col-lg-10">
+               <div class="cta">
+                   <h2 class="t-white">Kontakt</h2>
+                   <p class="t-white text-center lead">
+                     Hvis du har modtaget en e-mail eller brev vedrrende et krav mod dig, har du her mulighed for, at logge ind og g re indsigelse mod kravet. Vi gr dig opm rksom p, at indsigelsen kan afvises samt at det kan resultere i en retssag samt yderligere inkassoomkostninger, s fremt du dmmes til at betale kravet alligevel.
+                   </p>
+
+                   <br><br>
+                   <a class="btn btn--sm btn--primary-1 type--uppercase" href="/login/"> <span class="btn__text">
+                      Log Und
+                  </span> </a>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+
+{% endblock %}

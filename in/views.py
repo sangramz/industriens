@@ -68,3 +68,10 @@ def afdrag(request):
         return render(request, 'in/afdrag.html')
 
 #               -------- afdrag ---------
+
+#               -------- modtaget ---------
+
+def modtaget(request):
+        return render(request, 'in/modtaget.html')
+
+#               -------- modtaget ---------
