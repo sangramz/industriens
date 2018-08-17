@@ -25,7 +25,7 @@ SECRET_KEY = 's45e7c92@y$pzd!5fpgx-*eu+*v=^=fjw%%-n9x%na#02187v)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['inkassodemo.pythonanywhere.com']
 
 
 # Application definition
@@ -84,11 +84,10 @@ WSGI_APPLICATION = 'site_main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'in_db',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': ''
+        'NAME': 'inkassoDemo$in_db',
+        'USER': 'inkassoDemo',
+        'PASSWORD': 'Qazxsw12#',
+        'HOST': 'inkassoDemo.mysql.pythonanywhere-services.com',
     }
 }
 
@@ -129,6 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/inkassoDemo/site_main/static'
 
 LOGIN_REDIRECT_URL = '/kunde'
 LOGOUT_REDIRECT_URL = '/accounts/login'
