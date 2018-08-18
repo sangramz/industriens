@@ -20,7 +20,7 @@
     <body data-smooth-scroll-offset="77">
         <div class="nav-container">
             <div>
-                <div class="bar bar--sm visible-sm">
+                <div class="bar bar--xs bar--sm visible-sm visible-xs">
                     <div class="container">
                         <div class="row">
                             <div class="col-3 col-md-2">
@@ -32,10 +32,10 @@
                         </div>
                     </div>
                 </div>
-                <nav id="menu1" class="bar bar-1 hidden-sm pos-fixed" data-scroll-class="366px:pos-fixed">
+                <nav id="menu1" class="bar bar-1 hidden-xs hidden-sm pos-fixed" data-scroll-class="366px:pos-fixed">
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-1 col-md-2 hidden-sm">
+                            <div class="col-lg-1 col-md-2 hidden-xs hidden-sm">
                                 <div class="bar__module">
                                     <a href="{% url 'index' %}"> <img class="logo logo-dark" alt="logo" src="{% static 'in/img/main/dd.png' %}"> <img class="logo logo-light" alt="logo" src="{% static 'in/img/logo-light.png' %}"> </a>
                                 </div>
@@ -54,9 +54,65 @@
                                           </a>
                                         </li>
                                         <li>
-                                          <a href="{% url 'kontakt' %}">
-                                              Kontakt
-                                          </a>
+                                          <div class="modal-instance">
+                                            <a class="modal-trigger" href="#" data-modal-index="3">
+                                                KONTAKT
+                                                <div class="modal-container" data-modal-index="4"style="top:5%; right:50%">
+                                                  <div class="modal-content section-modal">
+                                                    <section class="unpad ">
+                                                      <div class="container">
+                                                        <div class="row justify-content-center">
+                                                          <div class="col-md-6 col-12">
+                                                            <div class="feature feature-1">
+                                                              <div class="feature__body boxed boxed--lg boxed--border text-center">
+                                                                <section class="space--xs imagebg" data-gradient-bg="#4876BD,#5448BD,#8F48BD,#BD48B1"><canvas id="granim-0" width="100%" height="100%"></canvas>
+                                                                    <div class="container">
+                                                                        <div class="cta cta--horizontal">
+                                                                          <h4><i class="fa fa-comment-alt"></i> <strong>Send os en Besked - vi svarer hurtigst muligt</strong></h4><br>
+                                                                          </div>
+                                                                          <form>
+                                                                            <div class="row">
+                                                                              <div class="col-md-12">
+                                                                                  <input type="email" placeholder="Email">
+                                                                              </div>
+                                                                              <div class="col-md-12">
+                                                                                  <textarea placeholder="besked"></textarea>
+                                                                              </div>
+
+                                                                              <div class="col-md-12">
+                                                                                  <button class="btn btn--primary type--uppercase" type="submit">Send</button>
+                                                                              </div>
+                                                                              <br><br>
+
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="col-md-8">
+                                                                                    <button class="btn btn--google type--uppercase t-white" type="submit"><strong>Vedhaeft Fil</strong></button>
+                                                                                </div>
+                                                                                <div class="col-md-4">
+                                                                                    <a class="lead">Annuler</a>
+                                                                                </div>
+                                                                          </div>
+                                                                            <!--end of row-->
+                                                                          </form>
+                                                                      </div>
+                                                                      <!--end of container-->
+                                                                  </section>
+
+
+                                                              </div>
+                                                          </div>
+                                                          <!--end feature-->
+                                                          </div>
+                                                        </div>
+                                                        <!--end of row-->
+                                                      </div>
+                                                      <!--end of container-->
+                                                    </section>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                          </div>
                                         </li>
                                     </ul>
                                 </div>
