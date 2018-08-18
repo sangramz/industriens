@@ -44,12 +44,12 @@
                                 <div class="bar__module" style="padding-top:1em">
                                     <ul class="menu-horizontal text-left">
                                         <li>
-                                          <a href="#">
+                                          <a href="#servicen">
                                               Servicen
                                           </a>
                                         </li>
                                         <li>
-                                          <a href="#">
+                                          <a href="#pricen">
                                               Pricen
                                           </a>
                                         </li>
@@ -80,7 +80,7 @@
 
                   <p class="text-right" style="color:white">
                         Har du modtaget en opkraevning ?
-                        <a class="btn btn--xs type--uppercase" href="#">
+                        <a class="btn btn--xs type--uppercase" href="{% url 'modtaget' %}">
                             <span class="btn__text" style="color:white">
                                 Klik her
                             </span>
@@ -124,6 +124,9 @@
                     </div>
                 </div>
             </section>
+
+            <a id="servicen" data-scroll-id="servicen" tabindex="-1" style="outline: none;"></a>
+
             <section class="text-center space--sm">
                 <div class="container">
                     <div class="row">
@@ -168,6 +171,9 @@
                     </div>
                 </div>
             </section>
+
+            <a id="pricen" data-scroll-id="pricen" tabindex="-1" style="outline: none;"></a>
+
             <section class="bg--dark-blue space--xs text-center">
                 <div class="container">
                     <div class="row">
@@ -185,7 +191,7 @@
                                   ** Safremt skyldner afgiver indsigelse mod kravet, eller vi af andre rsager skal i retten for at inddrive g lden, kan der v re omkostninger forbundet med det. Du vil i s fald altid blive oplyst det f rst.
                                 </p>
                                 <p class="text-left light-blue lead">Kom i gang allerede nu!</p>
-                                <a class="btn btn--primary type--uppercase" href="#">
+                                <a class="btn btn--primary type--uppercase" href="{% url 'register' %}">
                                   <span class="btn__text">
                                   Opret Bruger
                                   </span>
