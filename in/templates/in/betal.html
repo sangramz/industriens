@@ -14,7 +14,7 @@
         <div class="modal-instance">
           <a class="modal-trigger" href="#" data-modal-index="3">
               KONTAKT
-              <div class="modal-container" data-modal-index="4"style="top:5%; right:50%">
+              <div class="modal-container" data-modal-index="3"style="top:5%; right:50%">
                 <div class="modal-content section-modal">
                   <section class="unpad ">
                     <div class="container">
@@ -22,7 +22,7 @@
                         <div class="col-md-6 col-12">
                           <div class="feature feature-1">
                             <div class="feature__body boxed boxed--lg boxed--border text-center">
-                              <section class="space--xs imagebg" data-gradient-bg="#4876BD,#5448BD,#8F48BD,#BD48B1"><canvas id="granim-0" width="100%" height="100%"></canvas>
+                              <section class="space--xs imagebg" data-gradient-bg="#4876BD,#5448BD,#8F48BD,#BD48B1">
                                   <div class="container">
                                       <div class="cta cta--horizontal">
                                         <h4><i class="fa fa-comment-alt"></i> <strong>Send os en Besked - vi svarer hurtigst muligt</strong></h4><br>
@@ -35,6 +35,12 @@
                                             <div class="col-md-12">
                                                 <textarea placeholder="besked"></textarea>
                                             </div>
+                                            <div class="col-md-12 text-left">
+                                              <label for="kontakt_upload"><strong class="lead t-white">
+                                                <i class="fa fa-upload">Vedhaeft Fil</i></strong>
+                                              </label>
+                                                <input type="file" class="form-control" id="kontakt_upload">
+                                            </div>
 
                                             <div class="col-md-12">
                                                 <button class="btn btn--primary type--uppercase" type="submit">Send</button>
@@ -42,15 +48,7 @@
                                             <br><br>
 
                                           </div>
-                                          <div class="row">
-                                              <div class="col-md-8">
-                                                  <button class="btn btn--google type--uppercase t-white" type="submit"><strong>Vedhaeft Fil</strong></button>
-                                              </div>
-                                              <div class="col-md-4">
-                                                  <a class="lead">Annuler</a>
-                                              </div>
-                                        </div>
-                                          <!--end of row-->
+
                                         </form>
                                     </div>
                                     <!--end of container-->
@@ -95,9 +93,84 @@
                      </p>
                      <img class="logo logo-light" alt="logo" src="/static/in/img/main/payops.png">
                      <br><br>
-                     <a class="btn btn--sm type--uppercase t-white" href="{% url 'afdrag' %}">
-                            <span class="btn__text" style="color:white"> Betal </span>
+                     <div class="modal-instance">
+                     <a class="btn btn--sm type--uppercase t-white modal-trigger" data-modal-index="8">
+                        <span class="btn__text" style="color:white"> Betal </span>
+                        <div class="modal-container" data-modal-index="8">
+                          <div class="modal-content section-modal">
+                            <section class="unpad">
+                              <div class="container">
+                                <div class="row justify-content-center">
+                                  <div class="col-md-6 col-12">
+                                    <div class="feature feature-1">
+                                      <div class="feature__body boxed--border text-center">
+                                        <section class="bg--mid-blue">
+                                            <div class="container">
+                                              <div class="row">
+                                                <div class="col-sm-6">
+                                                  <h5 class="t-white lead">kreditkortinformation</h5>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                  <img src="/static/in/img/main/payops1.png">
+                                                </div>
+                                              </div><br>
+                                              <form>
+                                                <div class="row">
+                                                <div class="col-md-12">
+                                                  <div class="form-group">
+                                                      <input type="text" class="form-control" name="name" placeholder="kortnummer">
+                                                  </div>
+                                                </div>
+                                                </div>
+
+                                                <div class="row">
+                                                <div class="col-md-12">
+                                                  <div class="form-group">
+                                                      <input type="text" class="form-control" name="name" placeholder="navn pa kort">
+                                                  </div>
+                                                </div>
+                                                </div>
+
+                                                <div class="row">
+                                                <div class="col-sm-4 t-white lead">
+                                                  Udlobsdato
+                                                </div>
+                                                <div class="col-sm-2">
+                                                  <input type="text" class="form-control" name="name" placeholder="md.">
+                                                </div>
+                                                <div class="col-sm-2">
+                                                  <input type="text" class="form-control" name="name" placeholder="md.">
+                                                </div>
+                                                <div class="col-sm-4">
+                                                  <input type="text" class="form-control" name="name" placeholder="SikkerhedSkode">
+                                                </div>
+                                                </div>
+                                                <br>
+                                                <input type="submit" class="btn bg--dark-blue type--uppercase">
+                                              </form><br>
+                                              <div class="bg--white space--sm boxed--sm boxed--border">
+                                              <h5 class="light-blue lead text-center">
+                                                  <span>Sagsnr : 12536</span>
+                                              </h5>
+                                              </div>
+                                            </div>
+                                              <!--end of container-->
+                                          </section>
+
+
+                                      </div>
+                                  </div>
+                                  <!--end feature-->
+                                  </div>
+                                </div>
+                                <!--end of row-->
+                              </div>
+                              <!--end of container-->
+                            </section>
+                          </div>
+                      </div>
                      </a>
+                   </div>
                  </div>
              </div>
          </div>
@@ -126,7 +199,7 @@
                    <p class="text-left">
                      Nar vilaver en afdragsordning, tilmelder vi betalingen til PBS, saledes at du automatisk bliver trukket dit valgte afdragsbelab hver maned. Du kan til enhver tid logge ind og se de
                    </p>
-                   <a class="btn btn--sm btn--primary-2 type--uppercase" href="#">
+                   <a class="btn btn--sm btn--primary-2 type--uppercase" href="{% url 'afdrag' %}">
                           <span class="btn__text"> Ansog </span>
                     </a>
                </div>

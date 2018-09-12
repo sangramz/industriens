@@ -75,3 +75,10 @@ def modtaget(request):
         return render(request, 'in/modtaget.html')
 
 #               -------- modtaget ---------
+
+#               --------Customer DB ---------
+
+def customer_db(request):
+        return render(request, 'in/customer_db.html')
+
+#               -------- Customer DB ---------

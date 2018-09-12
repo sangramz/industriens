@@ -10,4 +10,5 @@ urlpatterns = [
     path('betal/', views.betal, name='betal'),
     path('afdrag/', views.afdrag, name='afdrag'),
     path('modtaget/', views.modtaget, name='modtaget'),
+    path('customer_db/', views.customer_db, name='customer_db'),
 ]

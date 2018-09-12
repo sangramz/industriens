@@ -1,0 +1,335 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block cssfiles %}
+  <link rel='stylesheet' href="{% static 'in/css/fullcalendar.css' %}" type="text/css" />
+  <style>
+  div#fullcalendar .fc-header-title h2 {
+    color: #0F0;
+    }
+  </style>
+{% endblock %}
+{% block topmenu %}
+<div class="col-lg-11 col-md-12 text-right text-left-xs text-left-sm">
+  <div class="bar__module" style="padding-top:1em">
+      <ul class="menu-horizontal text-left">
+        <li>
+
+      </li>
+      <li>
+
+      </li>
+      <li>
+        <div class="modal-instance">
+          <a class="modal-trigger" href="#" data-modal-index="3">
+              KONTAKT
+              <div class="modal-container" data-modal-index="3"style="top:5%; right:50%">
+                <div class="modal-content section-modal">
+                  <section class="unpad ">
+                    <div class="container">
+                      <div class="row justify-content-center">
+                        <div class="col-md-6 col-12">
+                          <div class="feature feature-1">
+                            <div class="feature__body boxed boxed--lg boxed--border text-center">
+                              <section class="space--xs imagebg" data-gradient-bg="#4876BD,#5448BD,#8F48BD,#BD48B1">
+                                  <div class="container">
+                                      <div class="cta cta--horizontal">
+                                        <h4><i class="fa fa-comment-alt"></i> <strong>Send os en Besked - vi svarer hurtigst muligt</strong></h4><br>
+                                        </div>
+                                        <form>
+                                          <div class="row">
+                                            <div class="col-md-12">
+                                                <input type="email" placeholder="Email">
+                                            </div>
+                                            <div class="col-md-12">
+                                                <textarea placeholder="besked"></textarea>
+                                            </div>
+                                            <div class="col-md-12 text-left">
+                                              <label for="kontakt_upload"><strong class="lead t-white">
+                                                <i class="fa fa-upload">Vedhaeft Fil</i></strong>
+                                              </label>
+                                                <input type="file" class="form-control" id="kontakt_upload">
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <button class="btn btn--primary type--uppercase" type="submit">Send</button>
+                                            </div>
+                                            <br><br>
+
+                                          </div>
+
+                                        </form>
+                                    </div>
+                                    <!--end of container-->
+                                </section>
+
+
+                            </div>
+                        </div>
+                        <!--end feature-->
+                        </div>
+                      </div>
+                      <!--end of row-->
+                    </div>
+                    <!--end of container-->
+                  </section>
+                </div>
+            </div>
+          </a>
+        </div>
+      </li>
+     </ul>
+   </div>
+   <div class="bar__module">
+     <a class="btn btn--sm btn--primary-2 type--uppercase" href="{% url 'login' %}">
+       <span class="btn__text"> Log Und </span> </a>
+   </div>
+</div>
+
+ {% endblock %}
+
+
+
+
+{% block content %}
+
+  <section class="bg--dark-blue text-center-xxs space--xs">
+    <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="calendar" style="width:75%; margin:auto;"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9">
+      </div>
+    <div class="col-md-3 pull-right">
+      <p class="t-white">Til forfald : <span style="font-size: 24px"> 6.199,00</span><br>
+        Over forfald : <span style="font-size: 24px"> 0,00</span>
+      </p>
+    </div>
+    </div>
+    </div>
+
+  </section>
+
+<section class="text-center-xxs space--xs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 text-center">
+        <h1 class="dark-blue">Kundekartotek</h1>
+      </div>
+      <div class="col-md-3 pull-right">
+        <div class="row">
+          <div class="col-sm-3">
+            <i class="fas fa-search fa-3x dark-blue pull-right"></i>
+          </div>
+          <div class="col-sm-9">
+            <input type="text" id="srch" placeholder="sog i Kundekartotek" class="form-control pull-right">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row space--md">
+
+          <p class="pull-left dark-blue">
+      			<span style="font-size:18px">
+      				&gt; Sorter efter
+      			</span><br>
+      			Forfalden Afdrag
+      		</p>
+
+
+							<table class="table">
+
+								<thead>
+									<tr class="pix-basic-blue">
+										<th>CVR</th>
+										<th>Firmanavn</th>
+										<th>Journalnr.</th>
+										<th>Tlf.</th>
+										<th>email</th>
+										<th>Udestaende</th>
+										<th>Inddrevet</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>123456</td>
+										<td>Kundenavvnr. 12</td>
+										<td>56869</td>
+										<td>20304050</td>
+										<td>kunde1@mail.dk</td>
+										<td>2.000,00</td>
+										<td>18.000,00</td>
+									</tr>
+									<tr>
+										<td>123457</td>
+										<td>Kundenavvnr. 12</td>
+										<td>56870</td>
+										<td>20304051</td>
+										<td>kunde1@mail.dk</td>
+										<td>500</td>
+										<td>22.000,00</td>
+									</tr>
+
+								</tbody>
+
+							</table>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="bg--mid1-blue text-center-xxs space--xs">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 text-center">
+        <h1 class="dark-blue">Skyldnerkartotek</h1>
+      </div>
+      <div class="col-md-3 pull-right">
+        <div class="row">
+          <div class="col-sm-3">
+            <i class="fas fa-search fa-3x dark-blue pull-right"></i>
+          </div>
+          <div class="col-sm-9">
+            <input type="text" id="srch" placeholder="sog i Kundekartotek" class="form-control pull-right">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row space--md">
+
+          <p class="pull-left dark-blue">
+      			<span style="font-size:18px">
+      				&gt; Sorter efter
+      			</span><br>
+      			Forfalden Afdrag
+      		</p>
+
+
+							<table class="table">
+
+								<thead>
+									<tr class="bg--mid1-blue">
+										<th>CVR</th>
+										<th>Firmanavn</th>
+										<th>Journalnr.</th>
+										<th>Tlf.</th>
+										<th>email</th>
+										<th>Udestaende</th>
+										<th>Inddrevet</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>123456</td>
+										<td>Kundenavvnr. 12</td>
+										<td>56869</td>
+										<td>20304050</td>
+										<td>kunde1@mail.dk</td>
+										<td>2.000,00</td>
+										<td>18.000,00</td>
+									</tr>
+									<tr>
+										<td>123457</td>
+										<td>Kundenavvnr. 12</td>
+										<td>56870</td>
+										<td>20304051</td>
+										<td>kunde1@mail.dk</td>
+										<td>500</td>
+										<td>22.000,00</td>
+									</tr>
+
+								</tbody>
+
+							</table>
+
+    </div>
+
+  </div>
+</section>
+{% endblock %}
+
+
+
+
+
+{% block jsfiles %}
+<script src="{% static 'in/js/moment.min.js' %}"></script>
+<script src="{% static 'in/js/fullcalendar.js' %}"></script>
+<script>
+// Setup FullCalendar
+(function () {
+    var date = new Date();
+    var d = date.getDate();
+    var m = date.getMonth();
+    var y = date.getFullYear();
+
+
+
+    $('#calendar').fullCalendar({
+        editable: true,
+        header: {
+  			left: 'prev,next today',
+  			center: 'title',
+  			right: 'month,agendaWeek,agendaDay',
+  		},
+        eventMouseover: function (data, event, view) {
+
+            tooltip = '<div class="tooltiptopicevent" style="width:auto;height:auto;background:#feb811;position:absolute;z-index:10001;color:white;padding:10px 10px 10px 10px ;  line-height: 200%;">' + 'title: ' + ': ' + data.title + '</br>' + 'start: ' + ': ' + data.start + '</div>';
+
+
+            $("body").append(tooltip);
+            $(this).mouseover(function (e) {
+                $(this).css('z-index', 10000);
+                $('.tooltiptopicevent').fadeIn('500');
+                $('.tooltiptopicevent').fadeTo('10', 1.9);
+            }).mousemove(function (e) {
+                $('.tooltiptopicevent').css('top', e.pageY + 10);
+                $('.tooltiptopicevent').css('left', e.pageX + 20);
+            });
+
+
+        },
+        eventMouseout: function (data, event, view) {
+            $(this).css('z-index', 8);
+
+            $('.tooltiptopicevent').remove();
+
+        },
+        dayClick: function () {
+            tooltip.hide()
+        },
+        eventResizeStart: function () {
+            tooltip.hide()
+        },
+        eventDragStart: function () {
+            tooltip.hide()
+        },
+        viewDisplay: function () {
+            tooltip.hide()
+        },
+        events: [{
+            title: 'Company 1',
+            start: new Date(y, m, d, 10, 30),
+            allDay: false,
+            color: 'white'
+        }, {
+            title: 'Company 2',
+            start: new Date(y, m, d + 1, 19, 0),
+            allDay: false,
+            color: 'white'
+        }]
+    });
+}());
+</script>
+{% endblock %}

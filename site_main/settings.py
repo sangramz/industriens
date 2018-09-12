@@ -25,7 +25,7 @@ SECRET_KEY = 's45e7c92@y$pzd!5fpgx-*eu+*v=^=fjw%%-n9x%na#02187v)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['inkassodemo.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'site_main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'inkassoDemo$in_db',
-        'USER': 'inkassoDemo',
-        'PASSWORD': 'Qazxsw12#',
-        'HOST': 'inkassoDemo.mysql.pythonanywhere-services.com',
+        'NAME': 'in_db',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
     }
 }
 
